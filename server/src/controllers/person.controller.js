@@ -1,7 +1,7 @@
-import responseHandler from "../handles/response.handler";
-import tmdbApi from "../tmdb/tmdb.api";
+import responseHandler from "../handles/response.handler.js";
+import tmdbApi from "../tmdb/tmdb.api.js";
 
-const personDetail =    async (req, res) =>{
+const personDetail = async (req, res) => {
     try {
         const { personId } = req.params
 
@@ -25,4 +25,4 @@ const personMedia = async (req, res) => {
     }
 }
 
-export default {personDetail, personMedia}
+export default { personDetail, personMedia }

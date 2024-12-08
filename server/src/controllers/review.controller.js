@@ -1,5 +1,5 @@
-import responseHandler from "../handles/response.handler";
-import reviewModel from "../models/review.model";
+import responseHandler from "../handles/response.handler.js";
+import reviewModel from "../models/review.model.js";
 const create = async (req, res) => {
     try {
         
@@ -55,4 +55,4 @@ const getReviewsOfUser = async (req, res) => {
     }
 }
 
-export default {create, remove, getReviewsOfUser}
+export default {create, remove, getReviewsOfUser};

@@ -71,11 +71,11 @@ const getDetail = async (req, res) => {
         if (tokenDecode) {
             const user = await userModel.findById(tokenDecoded.data)
             if (user) {
-                const isFavorite = await favoriteModel.findOne({user: user.id, mediaId})
-                media.isFavorite = isFavorite !== null            
+                const isFavorite = await favoriteModel.findOne({ user: user.id, mediaId })
+                media.isFavorite = isFavorite !== null
             }
         }
-        media.reviews = await reviewModel.find({ mediaId}).populate("user").sort("-createdAt")
+        media.reviews = await reviewModel.find({ mediaId }).populate("user").sort("-createdAt")
 
         responseHandler.ok(res, media)
 
@@ -85,4 +85,4 @@ const getDetail = async (req, res) => {
     }
 }
 
-export default {getList, getGenres, search, getDetail}
+export default { getList, getGenres, search, getDetail }

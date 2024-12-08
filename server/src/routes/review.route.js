@@ -2,7 +2,7 @@ import express from "express"
 import { body } from "express-validator"
 import reviewController from "../controllers/review.controller.js"
 import tokensMiddlewares from "../middlewares/tokens.middlewares.js"
-import requestHandler from "../handles/request.handler"
+import requestHandler from "../handles/request.handler.js"
 
 const router = express.Router({ mergeParams: true });
 
